@@ -1,3 +1,6 @@
 .card-contain{
     height: 480px;
 }
+.lazy-load-image-background.blur.lazy-load-image-loaded > img{
+    object-fit: cover;
+}

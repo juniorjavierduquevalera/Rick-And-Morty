@@ -25,23 +25,14 @@ const CharactersList = () => {
       getApi()
     }, [page]);
 
-    // if (loading) {
-    //   return (
-    //     <div className='flex items-center justify-center h-screen'>loading...</div>
-    //   )
-    // }
-
     const handlePageAndData = () => {
       if(page+1 <= apiInfo.pages)
         setPage(page+1);
     }
 
-    console.log('>>: pages > ', page < (apiInfo.pages+1))
-
     return (
       <div>
         <h1 className='text-green-500 text-4xl font-bold text-center mt-10'>Rick and Morty</h1>
-        {/* <NavPage ActualPage={page} setPage={setPage} /> */}
         <InfiniteScroll
           dataLength={characters.length}
           next={handlePageAndData}
@@ -62,7 +53,6 @@ const CharactersList = () => {
             ))}
           </div>
         </InfiniteScroll>
-        {/* <NavPage ActualPage={page} setPage={setPage} /> */}
       </div>
       );
     }
